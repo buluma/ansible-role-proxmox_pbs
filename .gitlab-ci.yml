@@ -30,7 +30,7 @@ linting:
     SCENARIO: "default"
     ANSIBLE: "previous"
   rules:
-    - if: $CI_COMMIT_REF_NAME == "main"
+    - if: $CI_COMMIT_REF_NAME == "master"
   parallel:
     matrix:
       - PLATFORM: [debian11]  # yamllint disable-line rule:line-length
