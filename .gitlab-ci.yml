@@ -19,7 +19,8 @@ linting:
   variables:
     COMMAND: "lint"
   script:
-    - "command=${COMMAND} /opt/molecule.sh"
+    # - "command=${COMMAND} /opt/molecule.sh"
+    - "ansible-lint"
 
 
 "default-previous":
