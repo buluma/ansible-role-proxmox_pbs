@@ -37,8 +37,8 @@ linting:
     matrix:
       - PLATFORM: [debian11]  # yamllint disable-line rule:line-length
   script:
-    # - "scenario=${SCENARIO} ansible=${ANSIBLE} platform=${PLATFORM} /opt/molecule.sh"
-    - "molecule test"
+    - "scenario=${SCENARIO} ansible=${ANSIBLE} platform=${PLATFORM} /opt/molecule.sh"
+    # - "molecule test"
 
 "default-current":
   needs:
