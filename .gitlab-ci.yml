@@ -11,6 +11,7 @@ stages:
 
 variables:
   DOCKER_HOST: "tcp://docker:2376"
+  DOCKER_TLS_VERIFY: 0
   PY_COLORS: 1
   ANSIBLE_FORCE_COLOR: 1
 
