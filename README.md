@@ -1,14 +1,50 @@
 # [proxmox_pbs](#proxmox_pbs)
 
-|GitHub|GitLab|
-|------|------|
-|[![github](https://github.com/mullholland/ansible-role-proxmox_pbs/workflows/Ansible%20Molecule/badge.svg)](https://github.com/mullholland/ansible-role-proxmox_pbs/actions)|[![gitlab](https://gitlab.com/mullholland/ansible-role-proxmox_pbs/badges/main/pipeline.svg)](https://gitlab.com/mullholland/ansible-role-proxmox_pbs)|
-
 description
+
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-proxmox_pbs/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-proxmox_pbs/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-proxmox_pbs)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/proxmox_pbs)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/pulls/)|
+
+## [Example Playbook](#example-playbook)
+
+This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-proxmox_pbs/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
+
+```yaml
+---
+- name: Converge
+  hosts: all
+  become: true
+  gather_facts: true
+  # vars:
+  #   example_var: "value"
+  roles:
+    - role: "buluma.proxmox_pbs"
+```
+
+The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-proxmox_pbs/blob/master/molecule/default/prepare.yml):
+
+```yaml
+---
+- name: Prepare
+  hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Copy PVE Repository Template
+      ansible.builtin.copy:
+        content: |
+            deb https://enterprise.proxmox.com/debian/pbs {{ ansible_distribution_release }} pbs-enterprise
+        dest: /etc/apt/sources.list.d/pbs-enterprise.list
+```
+
+Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
 
 ## [Role Variables](#role-variables)
 
-These variables are set in `defaults/main.yml`:
+The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-proxmox_pbs/blob/master/defaults/main.yml):
+
 ```yaml
 ---
 # Mostly tested and planned for Proxmox Backuper Server 2+/Debian 11 Bullseye
@@ -30,80 +66,53 @@ proxmox_pbs_enable_enterprise_repository: false
 proxmox_pbs_enable_no_subscription_repository: true
 ```
 
+## [Requirements](#requirements)
 
-## [Example Playbook](#example-playbook)
-
-This example is taken from `molecule/default/converge.yml` and is tested on each push, pull request and release.
-```yaml
----
-- name: Converge
-  hosts: all
-  become: true
-  gather_facts: true
-  # vars:
-  #   example_var: "value"
-  roles:
-    - role: "mullholland.proxmox_pbs"
-```
-
-The machine needs to be prepared in CI this is done using `molecule/default/prepare.yml`:
-```yaml
----
-- name: Prepare
-  hosts: all
-  become: true
-  gather_facts: true
-
-  tasks:
-    - name: Copy PVE Repository Template
-      ansible.builtin.copy:
-        content: |
-            deb https://enterprise.proxmox.com/debian/pbs {{ ansible_distribution_release }} pbs-enterprise
-        dest: /etc/apt/sources.list.d/pbs-enterprise.list
-```
+- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-proxmox_pbs/blob/master/requirements.txt).
 
 
+## [Context](#context)
 
+This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.github.io/) for further information.
 
+Here is an overview of related roles:
+
+![dependencies](https://raw.githubusercontent.com/buluma/ansible-role-proxmox_pbs/png/requirements.png "Dependencies")
 
 ## [Compatibility](#compatibility)
 
-This role has been tested on these [container images](https://hub.docker.com/u/mullholland):
+This role has been tested on these [container images](https://hub.docker.com/u/buluma):
 
--   [debian11](https://hub.docker.com/r/mullholland/docker-molecule-debian11)
+|container|tags|
+|---------|----|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|all|
+|[Amazon](https://hub.docker.com/repository/docker/buluma/amazonlinux/general)|Candidate|
+|[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
+|[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
+|[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
 
 The minimum version of Ansible required is 2.10, tests have been done to:
 
--   The previous versions.
--   The current version.
+- The previous version.
+- The current version.
+- The development version.
 
+If you find issues, please register them in [GitHub](https://github.com/buluma/ansible-role-proxmox_pbs/issues)
 
+## [Changelog](#changelog)
 
-## [Exceptions](#exceptions)
-
-Some variations of the build matrix do not work. These are the variations and reasons why the build won't work:
-
-| variation                 | reason                 |
-|---------------------------|------------------------|
-| Redhat/CentOS/Fedora | Proxmox is based on Debian |
-| Rocky Linux | Proxmox is based on Debian |
-| Almalinux | Proxmox is based on Debian |
-| Ubuntu | Proxmox is based on Debian |
-| AmazonLinux | Proxmox is based on Debian |
-| Debian10 | Testet only with Proxmox Backup Server 2/Debian 11 |
-
-
-If you find issues, please register them in [GitHub](https://github.com/mullholland/ansible-role-proxmox_pbs/issues)
+[Role History](https://github.com/buluma/ansible-role-proxmox_pbs/blob/master/CHANGELOG.md)
 
 ## [License](#license)
 
-MIT
-
+[MIT](https://github.com/buluma/ansible-role-proxmox_pbs/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
-[Mullholland](https://github.com/mullholland)
+[Mullholland](https://buluma.github.io/)
 
-## [Special Thanks](#special-thanks)
+Please consider [sponsoring me](https://github.com/sponsors/buluma).
+
+### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
