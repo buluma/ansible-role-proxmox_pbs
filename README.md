@@ -2,9 +2,9 @@
 
 description
 
-|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-proxmox_pbs/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/actions/workflows/molecule.yml)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-proxmox_pbs/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-proxmox_pbs)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/proxmox_pbs)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/pulls/)|
+|GitHub|Version|Issues|Pull Requests|
+|------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-proxmox_pbs/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -111,7 +111,6 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 [Mullholland](https://buluma.github.io/)
 
-Please consider [sponsoring me](https://github.com/sponsors/buluma).
 
 ### [Special Thanks](#special-thanks)
 
