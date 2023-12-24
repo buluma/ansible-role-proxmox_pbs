@@ -1,10 +1,10 @@
-# [Ansible role proxmox_pbs](#proxmox_pbs)
+# Ansible role [proxmox_pbs](https://galaxy.ansible.com/ui/standalone/roles/buluma/proxmox_pbs/documentation)
 
 description
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-proxmox_pbs/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-proxmox_pbs/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-proxmox_pbs.svg)](https://github.com/buluma/ansible-role-proxmox_pbs/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/proxmox_pbs)](https://galaxy.ansible.com/ui/standalone/roles/buluma/proxmox_pbs/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -105,13 +105,11 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-[MIT](https://github.com/buluma/ansible-role-proxmox_pbs/blob/master/LICENSE).
+[MIT](https://github.com/buluma/ansible-role-proxmox_pbs/blob/master/LICENSE)
 
 ## [Author Information](#author-information)
 
-[Mullholland](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
